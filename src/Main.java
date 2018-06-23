@@ -9,11 +9,9 @@ public class Main {
         JFrame mainWindow = new ChessBoardFrame();
         FiveChessData myFiveChess = new FiveChessData();
 
-
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainWindow.setSize(ChessBoardFrame.length, ChessBoardFrame.length);
-        mainWindow.add(new ChessBoardComponent());
-        mainWindow.setVisible(true);
+
+
     }
 
 
