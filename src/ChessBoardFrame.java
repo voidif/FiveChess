@@ -5,10 +5,12 @@ import java.awt.event.MouseEvent;
 
 public class ChessBoardFrame extends JFrame {
 
+    private FiveChessData myFiveChessData;
     private ChessBoardComponent mComponent;
 
-    public ChessBoardFrame(){
+    public ChessBoardFrame(FiveChessData data){
 
+        myFiveChessData = data;
         mComponent = new ChessBoardComponent();
 
         setSize(DrawData.LENGTH, DrawData.LENGTH);
@@ -28,6 +30,8 @@ public class ChessBoardFrame extends JFrame {
             ChessBoardCoord drawPosition = ChessBoardCoord.getCoordByNums(position);
 
             mComponent.drawChess(drawPosition);
+            //add to chessBoard data
+            myFiveChessData.step(position);
         }
 
     }
